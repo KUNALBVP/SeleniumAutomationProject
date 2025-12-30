@@ -1,0 +1,33 @@
+2025-12-27 14:19:30 [main] INFO  com.store.utlity.Log - _________________________End to End Test Case Started__________________________
+2025-12-27 14:19:31 [main] INFO  com.store.utlity.Log - Sign in button clicked
+2025-12-27 14:19:36 [main] INFO  com.store.utlity.Log - User logged in successfully
+2025-12-27 14:19:44 [main] INFO  com.store.utlity.Log - Order details verified
+2025-12-27 14:19:46 [main] INFO  com.store.utlity.Log - Payment Made
+2025-12-27 14:19:52 [main] INFO  com.store.utlity.Log - User logged out successfully
+2025-12-27 14:19:52 [main] INFO  com.store.utlity.Log - _________________________End to End Test Case Ended__________________________
+2025-12-27 23:06:12 [main] INFO  com.store.utlity.Log - _________________________End to End Test Case Started__________________________
+2025-12-27 23:06:14 [main] INFO  com.store.utlity.Log - Sign in button clicked
+2025-12-27 23:06:21 [main] INFO  com.store.utlity.Log - User logged in successfully
+2025-12-27 23:06:32 [main] INFO  com.store.utlity.Log - Order details verified
+2025-12-27 23:08:55 [main] INFO  com.store.utlity.Log - _________________________End to End Test Case Started__________________________
+2025-12-27 23:10:07 [main] INFO  com.store.utlity.Log - _________________________End to End Test Case Started__________________________
+2025-12-27 23:10:08 [main] INFO  com.store.utlity.Log - Sign in button clicked
+2025-12-27 23:10:09 [main] INFO  com.store.utlity.Log - User logged in successfully
+2025-12-27 23:14:28 [main] INFO  com.store.utlity.Log - _________________________End to End Test Case Started__________________________
+2025-12-27 23:14:30 [main] INFO  com.store.utlity.Log - Sign in button clicked
+2025-12-27 23:14:32 [main] INFO  com.store.utlity.Log - User logged in successfully
+2025-12-27 23:22:10 [main] INFO  com.store.utlity.Log - _________________________End to End Test Case Started__________________________
+2025-12-27 23:22:13 [main] INFO  com.store.utlity.Log - Sign in button clicked
+2025-12-27 23:22:14 [main] INFO  com.store.utlity.Log - User logged in successfully
+2025-12-27 23:22:26 [main] INFO  com.store.utlity.Log - Order details verified
+2025-12-27 23:26:53 [main] INFO  com.store.utlity.Log - _________________________End to End Test Case Started__________________________
+2025-12-27 23:27:34 [main] INFO  com.store.utlity.Log - _________________________End to End Test Case Started__________________________
+2025-12-27 23:27:35 [main] INFO  com.store.utlity.Log - Sign in button clicked
+2025-12-27 23:27:36 [main] INFO  com.store.utlity.Log - User logged in successfully
+2025-12-27 23:27:52 [main] INFO  com.store.utlity.Log - Order details verified
+2025-12-27 23:27:55 [main] INFO  com.store.utlity.Log - Payment Made
+2025-12-27 23:28:02 [main] INFO  com.store.utlity.Log - User logged out successfully
+2025-12-27 23:28:02 [main] INFO  com.store.utlity.Log - _________________________End to End Test Case Ended__________________________
+2025-12-28 12:12:31 [main] INFO  com.store.utlity.Log - _________________________End to End Test Case Started__________________________
+2025-12-28 12:12:33 [main] INFO  com.store.utlity.Log - Sign in button clicked
+2025-12-28 12:12:34 [main] INFO  com.store.utlity.Log - User logged in successfully

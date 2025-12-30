@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>TestNG:  FirefoxTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>FirefoxTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Dec 28 15:32:04 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>170 seconds (170308 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>sanity </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.store.testcases.CartPageTest.verifyProductOnCartPage()'><b>verifyProductOnCartPage</b><br>Test class: com.store.testcases.CartPageTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[[[EdgeDriver: MicrosoftEdge on windows (5ad714a9660e1af52c609338d9d961f5)] -&gt; xpath: //img[contains(@src, &apos;get_product_picture&apos;)]]] -&gt; xpath: ./ancestor::div[contains(@class,&apos;product-image-wrapper&apos;)]//div[contains(@class,&apos;product-overlay&apos;)]//div[contains(@class,&apos;overlay-content&apos;)]/a[contains(@class,&apos;add-to-cart&apos;)]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 23248, ms:edgeOptions: {debuggerAddress: localhost:52847}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52847/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ad714a9660e1af52c609338d9d961f5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.store.actiondrivers.ActionDriver.explicitWait(ActionDriver.java:750)
+	at com.store.pageobjects.SearchProductsPage.addRandomProductsToCart(SearchProductsPage.java:76)
+	at com.store.testcases.CartPageTest.verifyProductOnCartPage(CartPageTest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1084552714", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1084552714'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[[[EdgeDriver: MicrosoftEdge on windows (5ad714a9660e1af52c609338d9d961f5)] -&gt; xpath: //img[contains(@src, &apos;get_product_picture&apos;)]]] -&gt; xpath: ./ancestor::div[contains(@class,&apos;product-image-wrapper&apos;)]//div[contains(@class,&apos;product-overlay&apos;)]//div[contains(@class,&apos;overlay-content&apos;)]/a[contains(@class,&apos;add-to-cart&apos;)]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 23248, ms:edgeOptions: {debuggerAddress: localhost:52847}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52847/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ad714a9660e1af52c609338d9d961f5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.store.actiondrivers.ActionDriver.explicitWait(ActionDriver.java:750)
+	at com.store.pageobjects.SearchProductsPage.addRandomProductsToCart(SearchProductsPage.java:76)
+	at com.store.testcases.CartPageTest.verifyProductOnCartPage(CartPageTest.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>14</td>
+<td>com.store.testcases.CartPageTest@821330f</td></tr>
+<tr>
+<td title='com.store.testcases.OrderPageTest.verifyTotalOnOrderPage()'><b>verifyTotalOnOrderPage</b><br>Test class: com.store.testcases.OrderPageTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: MicrosoftEdge=143.0.3650.96)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6fce91179babbde327290474c8e8be59, actions {actions=[org.openqa.selenium.interactions.Sequence@3d433cb4]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 2604, ms:edgeOptions: {debuggerAddress: localhost:60192}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60192/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fce91179babbde327290474c8e8be59
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:647)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:616)
+	at com.store.actiondrivers.ActionDriver.click(ActionDriver.java:45)
+	at com.store.pageobjects.IndexPage.clickOnSignIn(IndexPage.java:37)
+	at com.store.testcases.OrderPageTest.verifyTotalOnOrderPage(OrderPageTest.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1933699454", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1933699454'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: MicrosoftEdge=143.0.3650.96)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6fce91179babbde327290474c8e8be59, actions {actions=[org.openqa.selenium.interactions.Sequence@3d433cb4]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 2604, ms:edgeOptions: {debuggerAddress: localhost:60192}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60192/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fce91179babbde327290474c8e8be59
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:647)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:616)
+	at com.store.actiondrivers.ActionDriver.click(ActionDriver.java:45)
+	at com.store.pageobjects.IndexPage.clickOnSignIn(IndexPage.java:37)
+	at com.store.testcases.OrderPageTest.verifyTotalOnOrderPage(OrderPageTest.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>112</td>
+<td>com.store.testcases.OrderPageTest@782859e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.store.testcases.ProductAvailabilityPageTest.verifyProductAvailability()'><b>verifyProductAvailability</b><br>Test class: com.store.testcases.ProductAvailabilityPageTest</td>
+<td></td>
+<td>2</td>
+<td>com.store.testcases.ProductAvailabilityPageTest@6f43c82</td></tr>
+<tr>
+<td title='com.store.testcases.LoginPageTest.loginTest()'><b>loginTest</b><br>Test class: com.store.testcases.LoginPageTest<br>Parameters: test123a@abc.com, 12345</td>
+<td></td>
+<td>8</td>
+<td>com.store.testcases.LoginPageTest@210ab13f</td></tr>
+</table><p>
+</body>
+</html>
