@@ -18,7 +18,7 @@ public interface ActionInterface {
 	public boolean selectByValue(WebElement element,String value);
 	public boolean selectByVisibleText(String visibletext, WebElement ele);
 	public boolean mouseHoverByJavaScript(WebElement locator);
-	public boolean JSClick(WebDriver driver, WebElement ele);
+	public boolean JSClick(WebDriver driver, WebElement ele) throws Throwable;
 	public boolean switchToFrameByIndex(WebDriver driver,int index);
 	public boolean switchToFrameById(WebDriver driver,String idValue);
 	public boolean switchToFrameByName(WebDriver driver,String nameValue);

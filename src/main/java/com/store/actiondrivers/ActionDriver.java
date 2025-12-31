@@ -30,14 +30,12 @@ import com.store.base.BaseClass;
 
 public class ActionDriver extends BaseClass implements ActionInterface {
 
-	@Override
 	public void scrollByVisibilityOfElement(WebDriver driver, WebElement ele) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", ele);
 
 	}
 
-	@Override
 	public void click(WebDriver driver, WebElement ele) {
 
 		Actions act = new Actions(driver);
@@ -45,7 +43,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 
 	}
 
-	@Override
 	public boolean findElement(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		try {
@@ -65,7 +62,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		return flag;
 	}
 
-	@Override
 	public boolean isDisplayed(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		flag = findElement(driver, ele);
@@ -82,7 +78,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		return flag;
 	}
 
-	@Override
 	public boolean isSelected(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		flag = findElement(driver, ele);
@@ -99,7 +94,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		return flag;
 	}
 
-	@Override
 	public boolean isEnabled(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		flag = findElement(driver, ele);
@@ -123,7 +117,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 	 * @param text
 	 * @return - true/false
 	 */
-	@Override
 	public boolean type(WebElement ele, String text) {
 		boolean flag = false;
 		try {
@@ -146,7 +139,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		return flag;
 	}
 
-	@Override
 	public boolean selectBySendkeys(String value,WebElement ele) {
 		boolean flag = false;
 		try {
@@ -178,7 +170,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 	 *                    Listbox etc..)
 	 * 
 	 */
-	@Override
 	public boolean selectByIndex(WebElement element, int index) {
 		boolean flag = false;
 		try {
@@ -209,7 +200,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 	 *                    Listbox etc..)
 	 */
 
-	@Override
 	public boolean selectByValue(WebElement element,String value) {
 		boolean flag = false;
 		try {
@@ -241,7 +231,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 	 *                    Listbox etc..)
 	 */
 
-	@Override
 	public boolean selectByVisibleText(String visibletext, WebElement ele) {
 		boolean flag = false;
 		try {
@@ -260,7 +249,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		}
 	}
 
-	@Override
 	public boolean mouseHoverByJavaScript(WebElement ele) {
 		boolean flag = false;
 		try {
@@ -286,33 +274,36 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		}
 	}
 
-	@Override
-	public boolean JSClick(WebDriver driver, WebElement ele) {
+	public boolean JSClick(WebDriver driver, WebElement ele) throws Throwable {
 		boolean flag = false;
 		try {
-			// WebElement element = driver.findElement(locator);
-			JavascriptExecutor executor = (JavascriptExecutor) driver;
-			executor.executeScript("arguments[0].click();", ele);
-			// driver.executeAsyncScript("arguments[0].click();", element);
+			try {
+				// WebElement element = driver.findElement(locator);
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				executor.executeScript("arguments[0].click();", ele);
+				// driver.executeAsyncScript("arguments[0].click();", element);
 
-			flag = true;
+				flag = true;
 
-		}
-
-		catch (Exception e) {
-			throw e;
-
-		} finally {
-			if (flag) {
-				System.out.println("Click Action is performed");
-			} else if (!flag) {
-				System.out.println("Click Action is not performed");
 			}
+
+			catch (Exception e) {
+				throw e;
+
+			} finally {
+				if (flag) {
+					System.out.println("Click Action is performed");
+				} else if (!flag) {
+					System.out.println("Click Action is not performed");
+				}
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return flag;
 	}
 
-	@Override
 	public boolean switchToFrameByIndex(WebDriver driver,int index) {
 		boolean flag = false;
 		try {
@@ -338,7 +329,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 	 * @param idValue : Frame ID wish to switch
 	 * 
 	 */
-	@Override
 	public boolean switchToFrameById(WebDriver driver,String idValue) {
 		boolean flag = false;
 		try {
@@ -364,7 +354,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 	 * @param nameValue : Frame Name wish to switch
 	 * 
 	 */
-	@Override
 	public boolean switchToFrameByName(WebDriver driver,String nameValue) {
 		boolean flag = false;
 		try {
@@ -383,7 +372,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		}
 	}
 
-	@Override
 	public boolean switchToDefaultFrame(WebDriver driver) {
 		boolean flag = false;
 		try {
@@ -402,7 +390,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		}
 	}
 
-	@Override
 	public void mouseOverElement(WebDriver driver,WebElement element) {
 		boolean flag = false;
 		try {
@@ -419,7 +406,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		}
 	}
 
-	@Override
 	public boolean moveToElement(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		try {
@@ -436,7 +422,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		return flag;
 	}
 
-	@Override
 	public boolean mouseover(WebDriver driver, WebElement ele) {
 		//boolean flag = false;
 		try {
@@ -455,7 +440,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 			 */
 		}
 	}
-	@Override
 	public boolean draggable(WebDriver driver,WebElement source, int x, int y) {
 		boolean flag = false;
 		try {
@@ -476,7 +460,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 			}
 		}
 	}
-	@Override
 	public boolean draganddrop(WebDriver driver,WebElement source, WebElement target) {
 		boolean flag = false;
 		try {
@@ -495,7 +478,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		}
 	}
 	
-	@Override
 	public boolean slider(WebDriver driver,WebElement ele, int x, int y) {
 		boolean flag = false;
 		try {
@@ -517,7 +499,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		}
 	}
 	
-	@Override
 	public boolean rightclick(WebDriver driver,WebElement ele) {
 		boolean flag = false;
 		try {
@@ -538,7 +519,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		}
 	}
 	
-	@Override
 	public boolean switchWindowByTitle(WebDriver driver,String windowTitle, int count) {
 		boolean flag = false;
 		try {
@@ -565,7 +545,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 			}
 		}
 	}
-	@Override
 	public boolean switchToNewWindow(WebDriver driver) {
 		boolean flag = false;
 		try {
@@ -586,7 +565,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 			}
 		}
 	}
-	@Override
 	public boolean switchToOldWindow(WebDriver driver) {
 		boolean flag = false;
 		try {
@@ -607,7 +585,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 			}
 		}
 	}
-	@Override
 	public int getColumncount(WebElement row) {
 		List<WebElement> columns = row.findElements(By.tagName("td"));
 		int a = columns.size();
@@ -619,7 +596,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		return a;
 	}
 	
-	@Override
 	public int getRowCount(WebElement table) {
 		List<WebElement> rows = table.findElements(By.tagName("tr"));
 		int a = rows.size() - 1;
@@ -633,7 +609,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 	 * @return: Boolean (True: If alert preset, False: If no alert)
 	 * 
 	 */
-	@Override
 	public boolean Alert(WebDriver driver) {
 		boolean presentFlag = false;
 		Alert alert = null;
@@ -659,7 +634,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 
 		return presentFlag;
 	}
-	@Override
 	public boolean launchUrl(WebDriver driver,String url) {
 		boolean flag = false;
 		try {
@@ -677,7 +651,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		}
 	}
 	
-	@Override
 	public boolean isAlertPresent(WebDriver driver) 
 	{ 
 		try 
@@ -691,7 +664,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		}   // catch 
 	}
 	
-	@Override
 	public String getTitle(WebDriver driver) {
 		boolean flag = false;
 
@@ -702,7 +674,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		return text;
 	}
 	
-	@Override
 	public String getCurrentURL(WebDriver driver)  {
 		boolean flag = false;
 
@@ -713,7 +684,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 		return text;
 	}
 	
-	@Override
 	public boolean click1(WebElement locator, String locatorName) {
 		boolean flag = false;
 		try {
@@ -732,7 +702,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 
 	}
 	
-	@Override
 	public void fluentWait(WebDriver driver,WebElement element, int timeOut) {
 	    Wait<WebDriver> wait = null;
 	    try {
@@ -745,20 +714,16 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 	    }catch(Exception e) {
 	    }
 	}
-	@Override
 	public void implicitWait(WebDriver driver, int timeOut) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeOut));
 	}
-	@Override
 	public void explicitWait(WebDriver driver, WebElement element, int timeOut ) {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeOut));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	@Override
 	public void pageLoadTimeOut(WebDriver driver, int timeOut) {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(timeOut));
 	}
-	@Override
 	public String screenShot(WebDriver driver, String filename) {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
@@ -775,7 +740,6 @@ public class ActionDriver extends BaseClass implements ActionInterface {
 				+ dateName + ".png";
 		return newImageString;
 	}
-	@Override
 	public String getCurrentTime() {
 		String currentDate = new SimpleDateFormat("yyyy-MM-dd-hhmmss").format(new Date());
 		return currentDate;
