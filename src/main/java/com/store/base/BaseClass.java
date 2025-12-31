@@ -22,7 +22,7 @@ public class BaseClass {
 	public static ActionDriver action;
 	
 	//declare threadLocal driver
-	public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	public static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
 	
 	public static WebDriver getDriver()
 	{
